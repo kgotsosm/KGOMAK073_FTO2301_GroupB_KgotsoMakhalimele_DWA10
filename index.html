@@ -11,7 +11,9 @@
     <title>Tally Count</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
+
+    <script src="/scripts.js" async defer></script>
 </head>
 
 <body>
@@ -21,7 +23,8 @@
             Tally Count
         </h1>
     </header>
-    <aside>
+
+    <!-- <aside>
         <div class="controls">
             <label for="">
                 <span>Display</span>
@@ -46,22 +49,22 @@
 
             <button>Settings</button>
         </div>
-    </aside>
+    </aside> -->
 
     <main class="counter">
-        <input class="counter__value" readonly value="10">
+        <input class="counter__value" data-key="number" readonly value="0">
         <div class="counter__actions">
-            <button class="counter__button counter__button_first">-</button>
-            <button class="counter__button">+</button>
+            <button class="counter__button counter__button_first" data-key="subtract">-</button>
+            <button class="counter__button" data-key="add">+</button>
         </div>
     </main>
 
     <footer class="footer">
-        Inspired by <a class="footer__link" href="https://tallycount.app/" target="_blank">Tally Count </a>. This is a Javascript practice
-            project.
+        Inspired by <a class="footer__link" href="https://tallycount.app/" target="_blank">Tally Count </a>. This is a
+        Javascript practice
+        project.
     </footer>
 
-    <script src="" async defer></script>
 </body>
 
 </html>
