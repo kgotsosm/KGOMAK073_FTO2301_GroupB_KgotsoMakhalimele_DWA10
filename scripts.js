@@ -42,19 +42,22 @@ const showReset = () => {
 }
 
 const subtractHandler = () => {
-
-    const newValue = parseInt(element.number.value) - STEP_AMOUNT
+    const currentValue = parseInt(element.number.value)
+    const newValue = Math.max(currentValue - STEP_AMOUNT, MIN_NUMBER) // Ensure the new value is not lower than the minimum value
     element.number.value = newValue
 
     if (element.add.disabled === true) {
         element.add.disabled = false
     }
-    else if (newValue <= MIN_NUMBER) {
+
+    if (newValue <= MIN_NUMBER || newValue === 0) { // Check the new value for disabling the subtract button
         element.subtract.disabled = true
     }
+
     updateColour()
     showReset()
 }
+
 
 const addHandler = () => {
     const newValue = parseInt(element.number.value) + STEP_AMOUNT
