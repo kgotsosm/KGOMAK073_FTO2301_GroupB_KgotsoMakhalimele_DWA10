@@ -74,8 +74,9 @@ const addHandler = () => {
     showReset()
 }
 
-
 const resetButton = document.getElementById('reset_button')
+
+// Reset button functionality
 resetButton.addEventListener('click', () => {
     element.number.value = 0
     element.add.disabled = false
